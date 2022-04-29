@@ -1,0 +1,19 @@
+{
+  "name": "studbud",
+  "version": "1.0.0",
+  "description": "Web application for studying",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurenceLzh/studbud.git"
+  },
+  "author": "Zehui Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurenceLzh/studbud/issues"
+  },
+  "homepage": "https://github.com/LaurenceLzh/studbud#readme"
+}
