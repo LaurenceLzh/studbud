@@ -1,0 +1,331 @@
+body {
+  overflow-y: hidden;
+}
+
+.top-tab {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  align-items: flex-start;
+  > a {
+    flex: 1;
+    height: 50px;
+    line-height: 65px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 5px #b3b3b3;
+    text-align: center;
+    font-weight: 600;
+    background-color: #e9e9ff;
+
+    &.active {
+      flex: 2;
+      height: 68px;
+      line-height: 80px;
+      color: #ffffff;
+      background-color: #f4a261;
+    }
+  }
+}
+
+.list-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 78px);
+
+  .list-outer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  #open_link {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    width: 160px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .list {
+    position: relative;
+    padding: 10px 100px 100px 100px;
+    background-color: #c7ddff;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: inset 1px 2px 5px #979797;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #b8b8ff;
+      border-radius: 10px;
+      box-shadow: inset 1px 1px 3px #919191;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ffffff;
+      border-radius: 10px;
+    }
+
+    .list-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .list-btn {
+        width: 160px;
+        text-align: center;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+
+        &:nth-child(2) {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .list-item {
+      font-weight: 600;
+      background-color: #fff;
+      border-radius: 15px;
+      margin-bottom: 20px;
+
+      &.active {
+        box-shadow: 0 0 8px 2px #f6b1b1;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        font-size: 18px;
+      }
+
+      .middle {
+        background-color: #f4a261;
+        padding: 30px 50px;
+
+        > div:nth-child(1) {
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        .link-icon {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background: url("../images/link.png") center no-repeat;
+          background-size: contain;
+          margin-right: 20px;
+        }
+
+        &.timer {
+          padding: 50px;
+          > div:nth-child(2) {
+            font-size: 30px;
+            margin-left: 30px;
+          }
+        }
+      }
+
+      &.timer {
+        .top {
+          background-color: #f4a261;
+          border-radius: 15px 15px 0 0;
+          padding: 25px 30px;
+        }
+        .middle {
+          background-color: #ffffff;
+          border-radius: 0 0 15px 15px;
+        }
+      }
+    }
+  }
+
+  .list-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: self-end;
+    width: 100%;
+
+    > div {
+      text-align: center;
+      background-color: #fff;
+      flex: 3;
+      padding: 20px 30px;
+      border-radius: 15px 15px 0 0;
+      box-shadow: 0px -4px 5px #b3b3b3;
+      font-weight: 600;
+      cursor: pointer;
+
+      &.active {
+        flex: 4;
+        padding: 30px;
+        color: #ffffff;
+        background-color: #a0f4ea;
+      }
+    }
+  }
+
+  .actions {
+    position: absolute;
+    right: 40px;
+    bottom: 250px;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #b8b8ff;
+      border-radius: 50%;
+      box-shadow: 0 -3px 3px rgb(184 184 255 / 50%);
+      cursor: pointer;
+
+      & + div {
+        margin-top: 30px;
+      }
+
+      img:nth-child(2) {
+        display: none;
+      }
+
+      &.active {
+        background-color: #ffffff;
+
+        img:nth-child(2) {
+          display: inline-block;
+        }
+
+        img:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.add-modal, .edit-modal {
+  display: none;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 2px 4px 5px #b3b3b3;
+  z-index: 999;
+}
+
+.add-modal .form-control, .edit-modal .form-control {
+  font-weight: 600;
+
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    background-color: #dcdcff;
+    border: none;
+    width: 400px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  textarea {
+    background-color: #dcdcff;
+    border: none;
+    width: 400px;
+    padding: 6px 12px;
+    height: 50px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+  }
+
+  button {
+    background-color: #dcdcff;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  & + .form-control {
+    margin-top: 10px;
+  }
+}
+
+.edit-modal .form-control {
+  button, input, textarea {
+    background-color: #c7ddff;
+  }
+  button {
+    width: 130px;
+  }
+}
+
+.add-modal .form-actions, .edit-modal .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+  .list-wrapper .list-outer {
+    width: inherit;
+    padding: 0 10px;
+  }
+  .list-wrapper .list {
+    padding: 10px 10px 100px;
+  }
+  .add-modal, .edit-modal {
+    width: 80%;
+    input, textarea {
+      width: 90% !important;
+    }
+  }
+  .list-wrapper #open_link {
+    right: 30px;
+    width: 120px;
+  }
+  .list-wrapper .list .list-top .list-btn {
+    width: 120px;
+  }
+}

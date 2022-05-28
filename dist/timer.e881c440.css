@@ -1,0 +1,91 @@
+.list-wrapper {
+  height: calc(100% - 20px);
+  margin-top: 20px;
+}
+
+.list-wrapper .list {
+  padding: 10px 100px;
+}
+
+.list-wrapper .list.timer {
+  background-color: #fff;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  padding: 30px 100px 0;
+  font-weight: 600;
+  display: flex;
+}
+
+.list-wrapper .list.timer .title {
+  font-size: 18px;
+}
+
+.list-wrapper .list.timer .time {
+  text-align: center;
+  font-size: 28px;
+}
+
+.list-wrapper .list.timer .button-wrapper {
+  justify-content: center;
+  display: flex;
+}
+
+.list-wrapper .list.timer .button-wrapper > div {
+  color: #fff;
+  cursor: pointer;
+  background-color: #dcdcff;
+  border-radius: 10px 10px 0 0;
+  margin: 0 20px;
+  padding: 16px 40px;
+  font-size: 18px;
+}
+
+.list-wrapper .list.timer .button-wrapper > div:hover {
+  background-color: #b8b8ff;
+}
+
+.add-modal .sub-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.add-modal .form-control {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+  display: flex;
+}
+
+.add-modal .form-control input {
+  width: 50px;
+  height: 62px;
+  background-color: #dcdcff;
+  font-size: 30px;
+}
+
+.add-modal .form-control .division {
+  margin: 0 20px;
+}
+
+.add-modal .form-control button + button {
+  margin-left: 20px;
+}
+
+.add-modal .form-actions {
+  margin-top: 30px !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .list-wrapper .list {
+    padding: 10px;
+  }
+
+  .list-wrapper .list.timer .button-wrapper > div {
+    padding: 8px 12px;
+  }
+}
+
+/*# sourceMappingURL=timer.e881c440.css.map */

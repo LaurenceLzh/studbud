@@ -1,2 +1,46 @@
 @import'layout';
 @import'navigation';
+@import "music-player";
+
+button {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  width: calc(100% - 60px);
+  height: 10px;
+  box-sizing: border-box;
+  background-color: #98c0ff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px 1px #b3b3b3;
+  margin-bottom: 10px;
+
+  .progress-inner-bar {
+    position: relative;
+    height: 10px;
+    width: 0  ;
+    background-color: #a0f4ea;
+    border-radius: 10px;
+    transition: width 50ms linear;
+  }
+
+  .progress-inner-circle {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,90 @@
+.list-wrapper {
+  margin-top: 20px;
+  height: calc(100% - 20px);
+
+  .list {
+    padding: 10px 100px;
+
+    &.timer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      background-color: #ffffff;
+      padding: 30px 100px 0 100px;
+      font-weight: 600;
+      
+
+      .title {
+        font-size: 18px;
+      }
+
+      .time {
+        text-align: center;
+        font-size: 28px;
+      }
+
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+
+        > div {
+          font-size: 18px;
+          color: #fff;
+          padding: 16px 40px;
+          border-radius: 10px 10px 0 0;
+          margin: 0 20px;
+          background-color: #dcdcff;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #b8b8ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-modal {
+  .sub-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+    input {
+      width: 50px;
+      height: 62px;
+      font-size: 30px;
+      background-color: #dcdcff;
+    }
+
+    .division {
+      margin: 0 20px;
+    }
+
+    button + button {
+      margin-left: 20px;
+    }
+  }
+
+  .form-actions {
+    margin-top: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .list-wrapper .list {
+    padding: 10px;
+  }
+  .list-wrapper .list.timer .button-wrapper > div {
+    padding: 8px 12px;
+  }
+}

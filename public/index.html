@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, world!</title>
+  <title>studbud</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="" />
-  <!--<link rel="icon" href="img/favicon.png">-->
+  <link rel="icon" href="../icon-black.png">
   <link rel="stylesheet" href="scss/main.scss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,23 +15,104 @@
 
 </head>
 <body>
-
-  <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">KANBAN BOARD</a>
-    <a href="#">TIMER</a>
-    <a href="#">MUSIC</a>
-    
+  <div class="container">
+    <div class="header">
+      <div class="header-inner">
+        <button class="openbtn" onclick="toggleNav()">
+          <img src="../icon.png" alt="icon" width="50" height="50">
+        </button>
+        <div id="tomatoTime" class="time">00:00</div>
+        <div id="tomato_status" class="btn">WORKING</div>
+      </div>
+      <div class="progress-bar">
+        <div id="tomatoProgress" class="progress-inner-bar">
+          <div class="progress-inner-circle"></div>
+          <audio id="end_audio" src="audioes/end.mp3"></audio>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div id="side_panel" class="side-panel">
+          <a class="active" href="kanban.html">KANBAN BOARD</a>
+          <a href="timer.html">TIMER</a>
+          <a href="music.html">MUSIC</a>
+        </div>
+      </div>
+      <div class="right">
+        <iframe id="iframe" src="kanban.html"></iframe>
+        <div class="bottom-player">
+          <div class="progress-bar">
+            <div id="music_progress" class="progress-inner-bar">
+              <div class="progress-inner-circle"></div>
+            </div>
+          </div>
+          <div class="bottom-inner">
+            <div id="music_list" class="left">
+              <div class="music-item" style="display: flex">
+                <img src="./images/music01.jpg" alt="prev" width="80" height="80" />
+                <audio src="audioes/music01.m4a"></audio>
+                <div class="music-info">
+                  <div class="title">10 Hz Alpha Thunderstorm (Extended Version)</div>
+                  <div class="name">White Noise Meditation</div>
+                </div>
+              </div>
+              <div class="music-item">
+                <img src="./images/music02.jpg" alt="prev" width="80" height="80" />
+                <audio src="audioes/music02.m4a"></audio>
+                <div class="music-info">
+                  <div class="title">Page Turning</div>
+                  <div class="name">KIds Music Fun Zone</div>
+                </div>
+              </div>
+              <div class="music-item">
+                <img src="./images/music03.jpg" alt="prev" width="80" height="80" />
+                <audio src="audioes/music03.m4a"></audio>
+                <div class="music-info">
+                  <div class="title">Night Droplets</div>
+                  <div class="name">White Noise Babies</div>
+                </div>
+              </div>
+              <div class="music-item">
+                <img src="./images/music04.jpg" alt="prev" width="80" height="80" />
+                <audio src="audioes/music04.mp3"></audio>
+                <div class="music-info">
+                  <div class="title">Relaxing Wave Sounds - ASMR - Loopable With No Fade</div>
+                  <div class="name">White Noise Babies</div>
+                </div>
+              </div>
+            </div>
+            <div class="center">
+              <button id="prev-btn">
+                <img src="./images/prev.png" alt="prev" width="70" height="70" />
+              </button>
+              <button id="play-btn">
+                <img src="./images/play.png" alt="stop" width="50" height="50" />
+              </button>
+              <button id="stop-btn" style="display: none">
+                <img src="./images/stop.png" alt="stop" width="70" height="70" />
+              </button>
+              <button id="next-btn">
+                <img src="./images/next.png" alt="next" width="70" height="70" />
+              </button>
+            </div>
+            <div class="right">
+              <button id="random_play" style="display: none">
+                <img src="./images/random.png" alt="random" width="40" height="40" />
+              </button>
+              <button id="order_play">
+                <img src="./images/loop.png" alt="loop" width="40" height="40" />
+              </button>
+              <button id="play_list">
+                <img src="./images/play-list.png" alt="play-list" width="40" height="40" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="rectangle"><button class="openbtn" onclick="openNav()">
-  <img src="../icon.png" alt="icon" width="50" height="50">
-  </button></div>
- 
-
-
 </body>
 
-<script src="script.js"></script>
-
-
+<script src="javascripts/script.js"></script>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Timer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/index.c74267d1.css">
+  <link rel="stylesheet" href="/timer.2c6f7443.css">
+  <link rel="stylesheet" href="/timer.e881c440.css">
+</head>
+<body>
+  <div class="top-tab">
+<!--    <a class="tab-item active"></a>-->
+<!--    <a class="tab-item"></a>-->
+  </div>
+  <div class="list-wrapper">
+    <div class="list-outer">
+      <div class="list" style="width: 100%">
+        <div class="list-top">
+          <div class="list-btn" style="color: #fff; background-color: #f4a261">POMODORE</div>
+        </div>
+        <div class="list-item timer">
+          <div class="top" id="timer_top">
+            <div id="tomato_status">WORKING TIME</div>
+            <div id="total_minute">0 minutes</div>
+          </div>
+          <div class="bottom timer">
+            <div>The rest time:</div>
+            <div id="tomato_rest_time">00: 00</div>
+          </div>
+        </div>
+      </div>
+      <div class="list timer" style="width: 100%">
+        <div class="title">STOPWATCH</div>
+        <div id="time" class="time">00:00:00</div>
+        <div class="button-wrapper">
+          <div id="start">START</div>
+          <div id="pause">PAUSE</div>
+          <div id="reset">RESET</div>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div id="add">
+        <img src="/add.626b7bd9.png" alt="add" width="30" height="30">
+        <img class="active-img" src="/add-active.8440f479.png" alt="add" width="30" height="30">
+      </div>
+<!--      <div id="edit">-->
+<!--        <img src="./images/edit.png" alt="edt" width="30" height="30" />-->
+<!--      </div>-->
+    </div>
+    <div class="add-modal">
+      <div class="sub-title">Working Time</div>
+      <div class="form-control">
+        <input id="working_time_hour">
+        <div class="division">:</div>
+        <input id="working_time_minute">
+      </div>
+      <div class="sub-title">Break Time</div>
+      <div class="form-control">
+        <input id="break_time_hour">
+        <div class="division">:</div>
+        <input id="break_time_minute">
+      </div>
+      <div class="form-control form-actions">
+        <button id="add_cancel">CANCEL</button>
+        <button id="add_confirm">START</button>
+      </div>
+    </div>
+    <div class="edit-modal">
+      <div class="form-control">
+        <label>Select Project Name:</label>
+        <input value="DECO2014">
+      </div>
+      <div class="form-control">
+        <label>Activity Name:</label>
+        <input value="Survey">
+      </div>
+      <div class="form-control">
+        <label>Content Name:</label>
+        <input value="Google">
+      </div>
+      <div class="form-control">
+        <label>Content:</label>
+        <textarea rows="4" cols="50">Google. (n.d.). Retrieved April 14, 2022, from https://www.google.com.hk/</textarea>
+      </div>
+      <div class="form-control">
+        <label>Link:</label>
+        <input value="HTTPS://WWW.GOOGLE.COM.HK/">
+      </div>
+      <div class="form-control form-actions">
+        <button id="edit_cancel">CANCEL</button>
+        <button id="edit_delete">DELETE</button>
+        <button id="edit_confirm">CHANGE</button>
+      </div>
+    </div>
+  </div>
+  <script src="/timer.f7396d07.js"></script>
+</body>
+</html>

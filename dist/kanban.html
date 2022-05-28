@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reading List</title>
+	<link rel="stylesheet" href="/index.c74267d1.css">
+	<link rel="stylesheet" href="/timer.2c6f7443.css">
+	<link rel="stylesheet" href="/kanban.6b595ff9.css">
+</head>
+<body>
+	<div class="top-tab">
+		<a href="/kanban.html" class="tab-item active">KANBAN</a>
+		<a href="/reading-list.html" class="tab-item">READING LIST</a>
+	</div>
+	<div class="list-wrapper">
+		<div class="list-outer">
+			<div id="list" class="list">
+			</div>
+			<div class="list-bottom">
+				<div class="active">READY</div>
+				<div>PROCESSING</div>
+				<div>DONE</div>
+			</div>
+		</div>
+		<div class="actions">
+			<div id="add">
+				<img src="/add.626b7bd9.png" alt="add" width="30" height="30">
+				<img class="active-img" src="/add-active.8440f479.png" alt="add" width="30" height="30">
+			</div>
+			<div id="edit">
+				<img src="/edit.0d86e27f.png" alt="edt" width="30" height="30">
+				<img class="active-img" src="/edit-active.404f155a.png" alt="edt" width="30" height="30">
+			</div>
+		</div>
+		<div class="add-modal">
+			<div class="form-control">
+				<label>Select Project Name:</label>
+				<input id="add_project_name">
+			</div>
+			<div class="form-control">
+				<label>State:</label>
+				<div id="add_state" class="state-list">
+					<div>READY</div>
+					<div>PROCESSING</div>
+					<div>DONE</div>
+				</div>
+			</div>
+			<div class="form-control">
+				<label>Activity Name:</label>
+				<input id="add_activity_name">
+			</div>
+			<div class="form-control">
+				<label>Content:</label>
+				<textarea id="add_content">
+			</textarea></div>
+			<div class="form-control">
+				<label>Due Day:</label>
+				<input type="date" id="add_date">
+			</div>
+			<div class="form-control form-actions">
+				<button id="add_cancel">CANCEL</button>
+				<button id="add_confirm">ADD</button>
+			</div>
+		</div>
+		<div class="edit-modal">
+			<div class="form-control">
+				<label>Select Project Name:</label>
+				<input id="edit_project_name">
+			</div>
+			<div class="form-control">
+				<label>State:</label>
+				<div id="edit_state" class="state-list">
+					<div>READY</div>
+					<div>PROCESSING</div>
+					<div>DONE</div>
+				</div>
+			</div>
+			<div class="form-control">
+				<label>Content Name:</label>
+				<input id="edit_activity_name">
+			</div>
+			<div class="form-control">
+				<label>Content:</label>
+				<textarea id="edit_content" rows="4" cols="50"></textarea>
+			</div>
+			<div class="form-control">
+				<label>Due Day:</label>
+				<input type="date" id="edit_date">
+			</div>
+			<div class="form-control form-actions">
+				<button id="edit_cancel">CANCEL</button>
+				<button id="edit_delete">DELETE</button>
+				<button id="edit_confirm">CHANGE</button>
+			</div>
+		</div>
+	</div>
+	<script src="/kanban.86252f22.js"></script>
+</body>
+</html>
