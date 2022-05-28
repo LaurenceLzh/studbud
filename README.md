@@ -6,19 +6,21 @@ The one on the left is the iteration, and the one on the right is the original d
 
 # Kanban
 * Removed the display of different states and color blocks in the upper kanban as the state changes, unified into a consistent kanban function. Click to switch from readingList to Kanban.
-* 
+* Changed the position of edit and add buttons to a more colorful position.
 
-![photo](/readme/Mockup1.png)
+![photo](/Kanban.png)
 
 # Music
-* 
+* Remove the status and readingList function bar to make the interface clearer.
+* The text has been shrunk to make the interface cleaner.
 
-![photo2](/readme/Mockup2.png)
+![photo2](/Music.png)
 
 # Reading-List
-* 
+* The classification of the three states is removed, and the different task links are grouped according to the filename.
+* The original status was changed to "Open Link" to make it easier to see the function of opening all links with one click.
 
-![photo3](/readme/Mockup3.png)
+![photo3](/Reading-List.png)
 
 # Timer
 * 
