@@ -3,14 +3,14 @@ const data = [
         projectName: 'DECO2014',
         state: 'READY',
         activityName: 'A3 Report',
-        content: 'Type iss same of your sotes for this projects.',
+        content: 'Type what you want to type',
         dueDate: new Date()
     },
     {
         projectName: 'DECO2017',
         state: 'READY',
         activityName: 'A3 Report',
-        content: 'Type iss same of your sotes for this projects.',
+        content: 'Type what you want to type',
         dueDate: new Date()
     }
 ];

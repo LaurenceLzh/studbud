@@ -23,9 +23,12 @@ The one on the left is the iteration, and the one on the right is the original d
 ![photo3](/Reading-List.png)
 
 # Timer
-* 
+* Remove the editing function, simplify the tedious multiple operations into a single operation.
+* Click the time above to pause the timing of POMODORE, click again to start to continue the timing.
+* Shrink the popover and move it up to prevent blocking stopwatch space.
+* Remove the directional triangle symbol to reduce the redundant visual effect.
 
-![photo3](/readme/Mockup3.png)
+![photo3](/Timer.png)
 
 # Reference
 * Alibaba Vector icon library. (n.d.). Retrieved May 28, 2022, from https://www.iconfont.cn/
