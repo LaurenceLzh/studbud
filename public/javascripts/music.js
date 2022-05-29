@@ -1,4 +1,4 @@
-
+// update music list item active
 function setMusicItemActive() {
 	const musicItems = window.parent.document.querySelectorAll('.music-item');
 	const activeMusicIndex = Array.from(musicItems).findIndex(item => item.style.display === 'flex');

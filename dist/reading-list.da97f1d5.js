@@ -1,3 +1,4 @@
+// initial data
 const data = [
     {
         projectName: 'DECO2014',
@@ -22,8 +23,10 @@ const data = [
     }, 
 ];
 const list = document.getElementById('list');
+// render reading list
 function renderList() {
     let listStr = '';
+    // constructor group data
     const groupData = {};
     data.forEach((item)=>{
         if (groupData[item.projectName]) groupData[item.projectName].push(item);
@@ -31,6 +34,7 @@ function renderList() {
             item
         ];
     });
+    // generate html fragment
     Object.keys(groupData).forEach((key)=>{
         listStr += `<div class="list-top"><div class="list-btn" style="background-color: #b8b8ff">${key}</div>
 					<div class="list-btn open-link" data-key="${key}" style="cursor: pointer;background-color: #a0f4ea">OPEN LINK</div></div>`;
@@ -56,6 +60,7 @@ function renderList() {
 }
 renderList();
 let editItemIndex;
+// add click event for reading list item
 function addItemClickEvent() {
     const listItems = document.querySelectorAll('.list-item');
     listItems.forEach((item1)=>{
@@ -66,6 +71,7 @@ function addItemClickEvent() {
             editItemIndex = Array.from(listItems).indexOf(item1);
         });
     });
+    // open all links when open link button click
     const openLinks = document.querySelectorAll('.open-link');
     openLinks.forEach((item2)=>{
         const key = item2.dataset.key;
@@ -91,7 +97,9 @@ addBtn.addEventListener('click', ()=>{
 });
 const addConfirm = document.querySelector('#add_confirm');
 const addCancel = document.querySelector('#add_cancel');
+// add confirm button event
 addConfirm.addEventListener('click', ()=>{
+    // add new item to data
     data.push({
         projectName: addProjectName.value,
         activityName: addActivityName.value,
@@ -100,6 +108,7 @@ addConfirm.addEventListener('click', ()=>{
         link: addLink.value
     });
     renderList();
+    // reset add modal input value
     addProjectName.value = '';
     addActivityName.value = '';
     addContentName.value = '';
@@ -119,6 +128,7 @@ const editActivityName = document.getElementById('edit_activity_name');
 const editContentName = document.getElementById('edit_content_name');
 const editContent = document.getElementById('edit_content');
 const editLink = document.getElementById('edit_link');
+// show edit modal when edit button click and set input value
 editBtn.addEventListener('click', ()=>{
     if (editItemIndex !== undefined) {
         const item = data[editItemIndex];
@@ -144,6 +154,7 @@ editDelete.addEventListener('click', ()=>{
     editModal.style.display = 'none';
     editBtn.classList.remove('active');
 });
+// update item when confirm button click
 editConfirm.addEventListener('click', ()=>{
     if (editItemIndex !== undefined) {
         const item = data[editItemIndex];

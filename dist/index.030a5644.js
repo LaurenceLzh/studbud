@@ -11,6 +11,7 @@ function toggleNav() {
 }
 const sidePanelLinks = sidePanel.querySelectorAll('a');
 const iframe = document.getElementById('iframe');
+// iframe route to the link when slide panel link click
 sidePanelLinks.forEach((link)=>{
     link.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -21,6 +22,7 @@ sidePanelLinks.forEach((link)=>{
         iframe.setAttribute('src', href);
     });
 });
+// play list button click to route music page
 document.getElementById('play_list').addEventListener('click', ()=>{
     sidePanelLinks.forEach((l)=>l.classList.remove('active')
     );
@@ -37,6 +39,7 @@ let tomatoPauseTime = 0;
 let tomatoStartTime;
 let tomatoEndTime;
 let duration = 0;
+// start working time
 function startWorkingTime(hour, minute, breakHour, breakMinute) {
     if (tomatoWorkingInterval) clearInterval(tomatoWorkingInterval);
     tomatoPauseTime = 0;
@@ -45,10 +48,12 @@ function startWorkingTime(hour, minute, breakHour, breakMinute) {
     tomatoEndTime = tomatoStartTime + duration;
     tomatoStatus.innerHTML = 'WORKING';
     tomatoStatus.style.backgroundColor = '#f4a261';
+    // call the anonymous function every 10 seconds, update progress and time string
     tomatoWorkingInterval = setInterval(()=>{
         if (!pauseFlag) {
             console.log(tomatoPauseTime);
             const times = tomatoEndTime - Date.now() - tomatoPauseTime;
+            // when working time is end, play an end music, then start break time
             if (times <= 0) {
                 clearInterval(tomatoWorkingInterval);
                 endAudio.play();
@@ -64,6 +69,7 @@ function startWorkingTime(hour, minute, breakHour, breakMinute) {
         }
     }, 16);
 }
+// start break time
 function startBreakTime(hour, minute) {
     if (tomatoWorkingInterval) clearInterval(tomatoWorkingInterval);
     tomatoPauseTime = 0;
@@ -72,6 +78,7 @@ function startBreakTime(hour, minute) {
     tomatoStartTime = Date.now();
     duration = hour + minute;
     tomatoEndTime = tomatoStartTime + duration;
+    // call the anonymous function every 10 seconds, update progress and time string
     tomatoWorkingInterval = setInterval(()=>{
         if (!pauseFlag) {
             const times = tomatoEndTime - Date.now() - tomatoPauseTime;
@@ -88,6 +95,7 @@ function startBreakTime(hour, minute) {
         }
     });
 }
+// pause and continue tomato time when click
 tomatoTime.addEventListener('click', ()=>{
     pauseFlag = !pauseFlag;
     if (pauseFlag) tomatoPauseTime = Date.now() - tomatoStartTime;
@@ -103,11 +111,12 @@ const musicList = document.querySelectorAll('#music_list .music-item');
 const audios = document.querySelectorAll('#music_list audio');
 const musicProgress = document.getElementById('music_progress');
 function playMusic() {
-    const musicItem = musicList[musicIndex];
+    const musicItem = musicList[musicIndex]; // get music by current music index
     if (pause) {
         pause = false;
         currentMusic.play();
     } else {
+        // new music to play
         startTime = Date.now();
         musicList.forEach((item)=>item.style.display = 'none'
         );
@@ -118,6 +127,7 @@ function playMusic() {
         currentMusic.removeEventListener('ended', playEnd);
         currentMusic.addEventListener('ended', playEnd);
     }
+    // calculate play time and update play progress
     const duration1 = parseInt(currentMusic.duration) * 1000;
     const musicEndTime = Date.now() + duration1;
     if (musicInterval) clearInterval(musicInterval);
@@ -130,6 +140,7 @@ function playMusic() {
         musicProgress.style.width = (duration1 - times) / duration1 * 100 + '%';
     }, 16);
 }
+// when a music play end, it will play another by play mode
 function playEnd() {
     if (playMode === 0) {
         musicIndex++;
@@ -138,6 +149,7 @@ function playEnd() {
     playMusic();
     if (iframe.contentWindow.setMusicItemActive) iframe.contentWindow.setMusicItemActive();
 }
+// pause the music when click
 const stopBtn = document.getElementById('stop-btn');
 stopBtn.addEventListener('click', ()=>{
     currentMusic.pause();
@@ -153,6 +165,7 @@ playBtn.addEventListener('click', ()=>{
     playBtn.style.display = 'none';
     stopBtn.style.display = 'block';
 });
+// set play music to prev
 const prevBtn = document.getElementById('prev-btn');
 prevBtn.addEventListener('click', ()=>{
     if (musicIndex > 0) {
@@ -167,6 +180,7 @@ prevBtn.addEventListener('click', ()=>{
         if (iframe.contentWindow.setMusicItemActive) iframe.contentWindow.setMusicItemActive();
     }
 });
+// set play music to next
 const nextBtn = document.getElementById('next-btn');
 nextBtn.addEventListener('click', ()=>{
     if (musicIndex < 3) {
@@ -181,6 +195,7 @@ nextBtn.addEventListener('click', ()=>{
         if (iframe.contentWindow.setMusicItemActive) iframe.contentWindow.setMusicItemActive();
     }
 });
+// switch play music mode
 let playMode = 0;
 const orderPlay = document.getElementById('order_play');
 const randomPlay = document.getElementById('random_play');

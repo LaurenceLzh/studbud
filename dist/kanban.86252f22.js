@@ -1,25 +1,28 @@
+// initial data
 const data = [
     {
         projectName: 'DECO2014',
         state: 'READY',
         activityName: 'A3 Report',
-        content: 'Type what you want to type',
+        content: 'Type iss same of your sotes for this projects.',
         dueDate: new Date()
     },
     {
         projectName: 'DECO2017',
         state: 'READY',
         activityName: 'A3 Report',
-        content: 'Type what you want to type',
+        content: 'Type iss same of your sotes for this projects.',
         dueDate: new Date()
     }
 ];
 let currentState = 'READY';
 const list = document.getElementById('list');
+// render kanban list
 function renderList() {
     let listStr = '';
     data.filter((item)=>item.state === currentState
-    ).forEach((item)=>{
+    ) // filter status
+    .forEach((item)=>{
         const listItem = `
 			<div class="list-item">
 				<div class="top">
@@ -45,6 +48,7 @@ function renderList() {
 renderList();
 const addBtn = document.getElementById('add');
 const addModal = document.querySelector('.add-modal');
+// add button click even
 addBtn.addEventListener('click', ()=>{
     addBtn.classList.add('active');
     addModal.style.display = 'block';
@@ -57,6 +61,7 @@ const addContent = document.getElementById('add_content');
 const addDate = document.getElementById('add_date');
 const addState = document.getElementById('add_state');
 const allState = addState.querySelectorAll('div');
+// add click event for status button
 allState.forEach((item)=>{
     item.addEventListener('click', ()=>{
         allState.forEach((state)=>state.classList.remove('active')
@@ -64,6 +69,7 @@ allState.forEach((item)=>{
         item.classList.add('active');
     });
 });
+// reset add modal input value
 function resetFormValue() {
     addProjectName.value = '';
     addActivityName.value = '';
@@ -72,8 +78,10 @@ function resetFormValue() {
     allState.forEach((state)=>state.classList.remove('active')
     );
 }
+// add modal confirm button click event
 addConfirm.addEventListener('click', ()=>{
     const state = addState.querySelector('.active').textContent;
+    // push a new item to data
     data.push({
         projectName: addProjectName.value,
         state: state,
@@ -81,17 +89,20 @@ addConfirm.addEventListener('click', ()=>{
         content: addContent.value,
         dueDate: new Date(addDate.value)
     });
+    // refresh list
     renderList();
     resetFormValue();
     addModal.style.display = 'none';
     addBtn.classList.remove('active');
 });
+// add cancel click event
 addCancel.addEventListener('click', ()=>{
     addModal.style.display = 'none';
     addBtn.classList.remove('active');
     resetFormValue();
 });
 let editItemIndex;
+// add active class when click list item,
 function addItemClickEvent() {
     const listItems = document.querySelectorAll('.list-item');
     // console.log(listItems);
@@ -104,6 +115,7 @@ function addItemClickEvent() {
         });
     });
 }
+// show the edit modal and set value to input
 const editBtn = document.getElementById('edit');
 const editModal = document.querySelector('.edit-modal');
 editBtn.addEventListener('click', ()=>{
@@ -146,13 +158,14 @@ editDelete.addEventListener('click', ()=>{
     editModal.style.display = 'none';
     editBtn.classList.remove('active');
 });
+// update item
 editConfirm.addEventListener('click', ()=>{
     if (editItemIndex !== undefined) {
         const state = editState.querySelector('.active').textContent;
         const item = data[editItemIndex];
         item.projectName = editProjectName.value;
         item.activityName = editActivityName.value;
-        item.content = editContent.textContent;
+        item.content = editContent.value;
         item.dueDate = new Date(editDate.value);
         item.state = state;
         renderList();
@@ -160,6 +173,7 @@ editConfirm.addEventListener('click', ()=>{
         editBtn.classList.remove('active');
     }
 });
+// filter list by click status
 const stateList = document.querySelectorAll('.list-bottom div');
 stateList.forEach((item2)=>{
     item2.addEventListener('click', ()=>{

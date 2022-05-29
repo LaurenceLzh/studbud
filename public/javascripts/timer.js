@@ -57,7 +57,6 @@ start.addEventListener('click', () => {
 		starting = true;
 		currentTime = Date.now() - pauseTime;
 		timeInterval = setInterval(timeStart, 16);
-		
 	}
 });
 
