@@ -7,11 +7,11 @@ nav{
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 250px; /* 0 width - change this with JavaScript */
-  background-color: #c7ddff; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  width: 250px; 
+  background-color: #c7ddff; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
   box-shadow: 2px 4px 5px #b3b3b3;
 }
 
