@@ -15,9 +15,12 @@
 
 </head>
 <body>
+  <!-- container start -->
   <div class="container">
+    <!-- header start -->
     <div class="header">
       <div class="header-inner">
+        <!-- toggle nav bar to show or hidden -->
         <button class="openbtn" onclick="toggleNav()">
           <img src="../icon.png" alt="icon" width="50" height="50">
         </button>
@@ -25,14 +28,19 @@
         <div id="tomato_status" class="btn">WORKING</div>
       </div>
       <div class="progress-bar">
+        <!-- tomato time progress bar -->
         <div id="tomatoProgress" class="progress-inner-bar">
           <div class="progress-inner-circle"></div>
+          <!-- tomato working time end audio -->
           <audio id="end_audio" src="audioes/end.mp3"></audio>
         </div>
       </div>
     </div>
+    <!-- header end -->
+    <!-- main start -->
     <div class="main">
       <div class="left">
+        <!-- side panel link to other page -->
         <div id="side_panel" class="side-panel">
           <a class="active" href="kanban.html">KANBAN BOARD</a>
           <a href="timer.html">TIMER</a>
@@ -40,7 +48,9 @@
         </div>
       </div>
       <div class="right">
+        <!-- iframe contain content page -->
         <iframe id="iframe" src="kanban.html"></iframe>
+        <!-- bottom music player -->
         <div class="bottom-player">
           <div class="progress-bar">
             <div id="music_progress" class="progress-inner-bar">
@@ -111,7 +121,9 @@
         </div>
       </div>
     </div>
+    <!-- main end -->
   </div>
+  <!-- container end -->
 </body>
 
 <script src="javascripts/script.js"></script>

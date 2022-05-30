@@ -63,6 +63,7 @@ nav{
 box-shadow: inset 2px 4px 5px #7979ab;
 }
 
+/* hide nav bar in mobile */
 @media only screen and (max-width: 900px) {
   .side-panel {
     width: 0;

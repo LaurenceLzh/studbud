@@ -17,6 +17,7 @@ body {
     font-weight: 600;
     background-color: #e9e9ff;
 
+    /* then active, change it style */
     &.active {
       flex: 2;
       height: 68px;
@@ -34,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* height should minus top-tab */
   height: calc(100% - 78px);
 
   .list-outer {
@@ -71,6 +73,7 @@ body {
     box-sizing: border-box;
     overflow-y: auto;
 
+    /* change list div scroll bar style */
     &::-webkit-scrollbar {
       width: 10px;
     }
@@ -96,6 +99,7 @@ body {
         font-weight: 600;
         font-size: 18px;
 
+        /* set second list-btn style */
         &:nth-child(2) {
           color: #ffffff;
         }
@@ -108,6 +112,7 @@ body {
       border-radius: 15px;
       margin-bottom: 20px;
 
+      /* list item can be edit, so it should be active when click it */
       &.active {
         box-shadow: 0 0 8px 2px #f6b1b1;
       }
@@ -123,6 +128,7 @@ body {
         background-color: #f4a261;
         padding: 30px 50px;
 
+        /* set first div style inside middle */
         > div:nth-child(1) {
           font-size: 24px;
           margin-bottom: 12px;
@@ -138,6 +144,7 @@ body {
           margin-right: 10px;
         }
 
+        /* set link background image */
         .link-icon {
           display: inline-block;
           width: 30px;
@@ -178,6 +185,7 @@ body {
     align-items: self-end;
     width: 100%;
 
+    /* list bottom div and active style */
     > div {
       text-align: center;
       background-color: #fff;
@@ -213,6 +221,7 @@ body {
       box-shadow: 0 -3px 3px rgb(184 184 255 / 50%);
       cursor: pointer;
 
+      /* next div */
       & + div {
         margin-top: 30px;
       }
@@ -221,6 +230,7 @@ body {
         display: none;
       }
 
+      /* when click add or edit button change it to active, and when add/edit modal hidden, set it to inactive */
       &.active {
         background-color: #ffffff;
 
@@ -244,6 +254,7 @@ body {
   position: absolute;
   top: 20px;
   left: 50%;
+  /* center modal */
   transform: translate(-50%);
   box-shadow: 2px 4px 5px #b3b3b3;
   z-index: 999;
@@ -307,6 +318,7 @@ body {
   justify-content: space-between;
 }
 
+/* change style when in mobile */
 @media only screen and (max-width: 900px) {
   .list-wrapper .list-outer {
     width: inherit;

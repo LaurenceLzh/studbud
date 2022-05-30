@@ -1,3 +1,4 @@
+/* cover default style of the browser */
 html, body {
     width: 100vw;
     height: 100vh;
@@ -9,6 +10,7 @@ body{
     background-color: rgb(253, 253, 253);
 }
 
+/* set container layout */
 .container {
     display: flex;
     flex-direction: column;
@@ -58,6 +60,7 @@ body{
     }
 }
 
+/* set main height and assign left and right div size */
 .main {
     display: flex;
     margin-top: 110px;
@@ -78,6 +81,7 @@ iframe {
     border: none;
 }
 
+/* change iframe width when in mobile */
 @media only screen and (max-width: 900px) {
     iframe {
         width: 100vw;

@@ -8,20 +8,25 @@
 	<link rel="stylesheet" href="/kanban.6b595ff9.css">
 </head>
 <body>
+	<!-- top tab start -->
 	<div class="top-tab">
 		<a href="/kanban.html" class="tab-item active">KANBAN</a>
 		<a href="/reading-list.html" class="tab-item">READING LIST</a>
 	</div>
+	<!-- top tab end -->
+	<!-- list wrapper start -->
 	<div class="list-wrapper">
 		<div class="list-outer">
 			<div id="list" class="list">
 			</div>
+			<!-- list bottom status buttons -->
 			<div class="list-bottom">
 				<div class="active">READY</div>
 				<div>PROCESSING</div>
 				<div>DONE</div>
 			</div>
 		</div>
+		<!-- add button and edit button -->
 		<div class="actions">
 			<div id="add">
 				<img src="/add.626b7bd9.png" alt="add" width="30" height="30">
@@ -32,6 +37,7 @@
 				<img class="active-img" src="/edit-active.404f155a.png" alt="edt" width="30" height="30">
 			</div>
 		</div>
+		<!-- add modal start -->
 		<div class="add-modal">
 			<div class="form-control">
 				<label>Select Project Name:</label>
@@ -62,6 +68,8 @@
 				<button id="add_confirm">ADD</button>
 			</div>
 		</div>
+		<!-- add modal end -->
+		<!-- edit modal start -->
 		<div class="edit-modal">
 			<div class="form-control">
 				<label>Select Project Name:</label>
@@ -93,7 +101,9 @@
 				<button id="edit_confirm">CHANGE</button>
 			</div>
 		</div>
+		<!-- edit modal end -->
 	</div>
+	<!-- list wrapper end -->
 	<script src="/kanban.86252f22.js"></script>
 </body>
 </html>

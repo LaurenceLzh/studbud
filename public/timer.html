@@ -14,12 +14,14 @@
 <!--    <a class="tab-item active"></a>-->
 <!--    <a class="tab-item"></a>-->
   </div>
+  <!-- list wrapper start -->
   <div class="list-wrapper">
     <div class="list-outer">
       <div class="list" style="width: 100%">
         <div class="list-top">
           <div class="list-btn" style="background-color: #f4a261; color: #ffffff">POMODORE</div>
         </div>
+        <!-- current tomato timer -->
         <div class="list-item timer">
           <div class="top" id="timer_top">
             <div id="tomato_status">WORKING TIME</div>
@@ -31,6 +33,7 @@
           </div>
         </div>
       </div>
+      <!-- stopwatch start -->
       <div class="list timer" style="width: 100%">
         <div class="title">STOPWATCH</div>
         <div id="time" class="time">00:00:00</div>
@@ -40,6 +43,7 @@
           <div id="reset">RESET</div>
         </div>
       </div>
+      <!-- stopwatch end -->
     </div>
     <div class="actions">
       <div id="add">
@@ -50,6 +54,7 @@
 <!--        <img src="./images/edit.png" alt="edt" width="30" height="30" />-->
 <!--      </div>-->
     </div>
+    <!-- add modal start -->
     <div class="add-modal">
       <div class="sub-title">Working Time</div>
       <div class="form-control">
@@ -68,6 +73,8 @@
         <button id="add_confirm">START</button>
       </div>
     </div>
+    <!-- add modal end -->
+    <!-- edit modal start -->
     <div class="edit-modal">
       <div class="form-control">
         <label>Select Project Name:</label>
@@ -95,7 +102,9 @@
         <button id="edit_confirm">CHANGE</button>
       </div>
     </div>
+    <!-- edit modal end -->
   </div>
+  <!-- list wrapper end -->
   <script src="javascripts/timer.js"></script>
 </body>
 </html>

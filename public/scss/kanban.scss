@@ -1,6 +1,8 @@
+/* state list div style that wrapper state item */
 .state-list {
   display: flex;
   flex-wrap: wrap;
+  /* all state item in state-list */
   > div {
     border-radius: 4px;
     padding: 8px 20px;
@@ -10,10 +12,12 @@
     box-sizing: border-box;
     cursor: pointer;
 
+    /* state item is odd, set right margin 20px */
     &:nth-child(2n + 1) {
       margin-right: 20px;
     }
 
+    /* set different state background color */
     &:nth-child(1) {
       background-color: #d9fbf7;
     }
@@ -51,17 +55,21 @@
   border-radius: 10px;
   color: #ffffff;
 
+  /* ready status */
   &.ready {
     background-color: #a0f4ea;
   }
+  /* processing status */
   &.processing {
     background-color: #f4a261;
   }
+  /* done status */
   &.done {
     background-color: #ffbaba;
   }
 }
 
+/* set status filter button color and background color */
 .list-bottom > div {
   &:nth-child(1) {
     color: #a0f4ea;

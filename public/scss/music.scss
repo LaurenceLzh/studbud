@@ -12,6 +12,7 @@
       padding: 10px 100px;
       background-color: transparent;
 
+      /* change it background color when a music active */
       &.active {
         background-color: #b8b8ff;
         box-shadow: 2px 2px 4px #b4b4b4;
@@ -48,6 +49,7 @@
   }
 }
 
+/* set font size and padding when in mobile */
 @media only screen and (max-width: 900px) {
   .list-wrapper .list .list-item {
     padding: 10px;

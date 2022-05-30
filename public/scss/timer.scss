@@ -5,6 +5,7 @@
   .list {
     padding: 10px 100px;
 
+    /* if list both have list and timer class */
     &.timer {
       display: flex;
       flex-direction: column;
@@ -27,6 +28,7 @@
         display: flex;
         justify-content: center;
 
+        /* all div tag style inside button-wrapper  */
         > div {
           font-size: 18px;
           color: #fff;
@@ -36,6 +38,7 @@
           background-color: #dcdcff;
           cursor: pointer;
 
+          /* when hover the div, change it background color */
           &:hover {
             background-color: #b8b8ff;
           }
@@ -69,6 +72,7 @@
       margin: 0 20px;
     }
 
+    /* button next button node */
     button + button {
       margin-left: 20px;
     }
@@ -79,6 +83,7 @@
   }
 }
 
+/* set small padding in mobile */
 @media only screen and (max-width: 900px) {
   .list-wrapper .list {
     padding: 10px;
