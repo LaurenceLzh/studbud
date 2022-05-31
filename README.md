@@ -1,12 +1,22 @@
-# Studbud
+# Studbud 
 >These are the four pages I designed, namely "Kanban", "Music", "Reading-list" and "Timer".
-The one on the left is the iteration, and the one on the right is the original design.
+The one on the left is the original design, and the one on the right is the the iteration.
+# Suggestions & Reflections
 
-#### _Considering that the previous prototype was too complex, I simplified some of the interface and functions._
+#### _I explained the mockup to my target group and asked for their input. They feel that there is still so much confusion in the interface that they don't know how best to use it and that there are so many repetitive points of information that users are still not necessary._
+
+#### _I made the changes by combining other people's opinions and self-reflection. For example:_
+* _The operation mode of the Tomato timer was chaotic, and users only had to enter their working hours and rest hours into it so that the timer would alert users at the end of each phase. This is a single loop. After the end, the user needs to reset the time instead of adding too many timer plans. That would be more confusing (and I think it's convenient to pause and start by clicking the timer's number)._ 
+* _The three status tabs of the kanban interface only need to exist in the kanban to keep the interface simple._
+* _Etc._ 
+
+### _**Here are the specific changes I made based on feedback and self-reflection.**_
+
+
 
 # Kanban
-* Removed the display of different states and color blocks in the upper kanban as the state changes, unified into a consistent kanban function. Click to switch from readingList to Kanban.
-* Changed the position of edit and add buttons to a more colorful position.
+* Removed the display of different states and color blocks in the upper kanban as the state changes, unified into a consistent kanban function. Click to switch from readingList to Kanban.Users better understand the functions of different modules.
+* Changed the location of the edit and added the button to a more spacious location. The user can see the edit and add function bar more clearly.
 
 ![photo](/Kanban.png)
 
@@ -17,14 +27,14 @@ The one on the left is the iteration, and the one on the right is the original d
 ![photo2](/Music.png)
 
 # Reading-List
-* The classification of the three states is removed, and the different task links are grouped according to the filename.
-* The original status was changed to "Open Link" to make it easier to see the function of opening all links with one click.
+* The classification of the three states is removed, and the different task links are grouped according to the filename. Users can classify and classify tasks according to the same task name, which is more convenient to refer to.
+* Change the original state to "Open Links" to open all links for the selected task in one click. More convenient for users.
 
 ![photo3](/Reading-List.png)
 
 # Timer
-* Remove the editing function, simplify the tedious multiple operations into a single operation.
-* Click the time above to pause the timing of POMODORE, click again to start to continue the timing.
+* For Pomodoro Timer. Remove the editing function, and simplify the multiple theoretical operations into a single process. The user can change the time of the timer by setting it multiple times. It is more apparent to the user to set up the single loop time.
+* Click the time above to pause the timing of POMODORE, click again to start to continue the timing. Make it easier for users to pause and start.
 * Shrink the popover and move it up to prevent blocking stopwatch space.
 * Remove the directional triangle symbol to reduce the redundant visual effect.
 
